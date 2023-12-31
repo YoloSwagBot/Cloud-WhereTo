@@ -1,21 +1,33 @@
 
-version: '0.0.1'
+version: '3.8'
 
 services:
-  nginx:
-    build: nginx/
+  loadbalancer:
+    image: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    networks:
+      - appstr_network
 
 
   website:
-    build: website/
+    image: nginx
+    volumes:
+      - ./website/nginx.conf:/etc/nginx/nginx.conf
+      - ./website/www:/etc/nginx/html
+    networks:
+      - appstr_network
 
-  postgres:
-    build: postgres/
+  # postgres:
+  #   build: postgres/
 
-  rest:
-    build: rest/
+  # rest:
+  #   build: rest/
 
-  cron:
-    build: cron/
 
+networks:
+  appstr_network:
+    driver: bridge
 

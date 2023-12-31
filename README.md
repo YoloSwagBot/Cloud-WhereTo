@@ -1,1 +1,1 @@
-This repo is used in Google Cloud, and shown on github for green squares and proof of skillset/expertise/etc.
+This repo is not 100% up to date as most recent changes are probably in Google Cloud.
