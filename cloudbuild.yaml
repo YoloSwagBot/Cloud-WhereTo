@@ -1,8 +1,8 @@
 
 
 steps:
-  - name: "docker/compose:2.23.3"
-    args: ['build']
-  - name: "docker/compose:2.23.3"
-    args: ['up', '-d']
+  - name: "gcr.io/cloud-builders/docker"
+    args: ['compose', 'build']
+  - name: "gcr.io/cloud-builders/docker"
+    args: ['compose', 'up', '-d']
 
