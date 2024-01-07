@@ -4,3 +4,6 @@ nginx/.DS_Store
 postgres/.DS_Store
 rest/.DS_Store
 website/.DS_Store
+
+
+variables.env.local
